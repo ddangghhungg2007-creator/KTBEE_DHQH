@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Trang tổng quan";
+}
+
+<h2 class="mb-4">TRANG TỔNG QUAN</h2>
+
+<div class="row g-3">
+
+    <div class="col-md-3">
+        <div class="admin-card">
+            <h6>Tổng đơn hàng</h6>
+            <h2 class="text-primary">@ViewBag.TongDonHang</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="admin-card">
+            <h6>Tổng khách hàng</h6>
+            <h2 class="text-success">@ViewBag.TongKhachHang</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="admin-card">
+            <h6>Tổng sản phẩm</h6>
+            <h2 class="text-warning">@ViewBag.TongSanPham</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="admin-card">
+            <h6>Đơn đã giao</h6>
+            <h2 class="text-info">@ViewBag.DonDaGiao</h2>
+        </div>
+    </div>
+
+</div>
+
+<div class="admin-card mt-4">
+    <h5>Doanh thu từ đơn đã giao</h5>
+
+    <h2 class="text-success">
+        @String.Format("{0:N0} VNĐ", ViewBag.DoanhThu)
+    </h2>
+</div>
